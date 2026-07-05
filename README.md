@@ -42,7 +42,11 @@ npm start
 
 Visit [http://127.0.0.1:3000](http://127.0.0.1:3000), log in, and you'll see the Hello World page.
 
-## Run tests
+## CI
+
+Unit tests run automatically on GitHub Actions for every push and pull request to `main` (Rust + Node.js).
+
+## Run tests locally
 
 ### Rust auth API
 
