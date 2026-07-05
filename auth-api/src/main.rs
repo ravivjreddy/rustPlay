@@ -8,6 +8,6 @@ async fn main() {
         .await
         .expect("failed to bind auth API");
 
-    println!("Rust auth API listening on http://127.0.0.1:8080");
+    println!("Rust auth API will be listening on http://127.0.0.1:8080");
     axum::serve(listener, app).await.expect("server failed");
 }
