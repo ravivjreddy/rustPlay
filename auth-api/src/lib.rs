@@ -184,9 +184,7 @@ mod tests {
                     .method("POST")
                     .uri("/api/login")
                     .header("content-type", "application/json")
-                    .body(Body::from(
-                        r#"{"username":"demo","password":"hello123"}"#,
-                    ))
+                    .body(Body::from(r#"{"username":"demo","password":"hello123"}"#))
                     .unwrap(),
             )
             .await
@@ -209,9 +207,7 @@ mod tests {
                     .method("POST")
                     .uri("/api/login")
                     .header("content-type", "application/json")
-                    .body(Body::from(
-                        r#"{"username":"demo","password":"wrong"}"#,
-                    ))
+                    .body(Body::from(r#"{"username":"demo","password":"wrong"}"#))
                     .unwrap(),
             )
             .await
@@ -261,9 +257,7 @@ mod tests {
                     .method("POST")
                     .uri("/api/login")
                     .header("content-type", "application/json")
-                    .body(Body::from(
-                        r#"{"username":"demo","password":"hello123"}"#,
-                    ))
+                    .body(Body::from(r#"{"username":"demo","password":"hello123"}"#))
                     .unwrap(),
             )
             .await

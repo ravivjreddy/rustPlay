@@ -7,13 +7,17 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "test": "node --test app.test.js"
+    "test": "node --test app.test.js",
+    "lint": "eslint ."
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "express": "^4.21.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
     "supertest": "^7.1.0"
   }
 }

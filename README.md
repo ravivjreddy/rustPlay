@@ -44,7 +44,14 @@ Visit [http://127.0.0.1:3000](http://127.0.0.1:3000), log in, and you'll see the
 
 ## CI
 
-Unit tests run automatically on GitHub Actions for every push and pull request to `main` (Rust + Node.js).
+On every push and pull request to `main`, GitHub Actions runs:
+
+| Job | Static analysis | Tests |
+|-----|-----------------|-------|
+| **Rust** | `cargo fmt --check`, `cargo clippy -D warnings` | `cargo test` |
+| **Node.js** | ESLint | `npm test` |
+
+View runs: https://github.com/ravivjreddy/rustPlay/actions
 
 ## Run tests locally
 
@@ -52,6 +59,8 @@ Unit tests run automatically on GitHub Actions for every push and pull request t
 
 ```powershell
 cd auth-api
+cargo fmt --check
+cargo clippy --all-targets -- -D warnings
 cargo test
 ```
 
@@ -60,6 +69,7 @@ cargo test
 ```powershell
 cd web
 npm install
+npm run lint
 npm test
 ```
 
