@@ -1,0 +1,19 @@
+{
+  "name": "rust-node-auth-demo-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js frontend for the Rust + Node auth demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test app.test.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.0"
+  }
+}

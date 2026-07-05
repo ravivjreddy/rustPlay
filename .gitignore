@@ -1,0 +1,7 @@
+/target/
+auth-api/target/
+web/node_modules/
+*.log
+cookie.txt
+headers.txt
+hello.html
